@@ -3,7 +3,7 @@ import { FullDate, FullDateProps } from '../../models/expenses.interface';
 import UtilityService from '../../services/utilities.service';
 import './ExpenseDate.css';
 
-const ExpenseDate: FC<FullDateProps> = (props: FullDateProps) => {
+const ExpenseDate: FC<FullDateProps> = (props) => {
     const fullDate: FullDate = UtilityService.getFullDate(props.date);
 
     return (
