@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { Expense } from "../../models/expenses.interface";
-import ExpenseService from "../../services/expenses.service";
-import Card from "../Card/Card";
+import { Expense } from "../../../models/expenses.interface";
+import ExpenseService from "../../../services/expenses.service";
+import Card from "../../UI/Card/Card";
 import ExpenseItem from "../ExpenseItem/ExpenseItem";
 import './ExpenseDisplay.css';
 

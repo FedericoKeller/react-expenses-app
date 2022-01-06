@@ -1,7 +1,7 @@
 
 import { FC } from 'react';
-import { ExpenseProps, Expense } from '../../models/expenses.interface';
-import Card from '../Card/Card';
+import { ExpenseProps, Expense } from '../../../models/expenses.interface';
+import Card from '../../UI/Card/Card';
 import ExpenseDate from '../ExpenseDate/ExpenseDate';
 import './ExpenseItem.css';
 

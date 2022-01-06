@@ -1,4 +1,4 @@
-import ExpenseDisplay from "./components/ExpenseDisplay/ExpenseDisplay";
+import ExpenseDisplay from "./components/Expenses/ExpenseDisplay/ExpenseDisplay";
 
 function App() {
 
