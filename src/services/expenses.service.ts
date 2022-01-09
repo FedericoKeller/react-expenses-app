@@ -28,6 +28,10 @@ const ExpenseService = {
 
       getExpenses: () => {
         return expenses.slice();
+      },
+
+      updateExpenses(item: Expense) {
+        expenses.push(item);
       }
 }
 

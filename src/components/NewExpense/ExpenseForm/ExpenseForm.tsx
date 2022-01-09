@@ -1,9 +1,10 @@
 import { ChangeEvent, FC, SyntheticEvent, useState } from "react";
+import { ExpenseFormData, ExpenseFormProps } from "../../../models/expenses.interface";
 import './ExpenseForm.css';
 
-const ExpenseForm: FC<{}> = (props) => {
+const ExpenseForm: FC<ExpenseFormProps> = (props) => {
     const [enteredTitle, setEnteredTitle] = useState('');
-    const [enteredAmount, setEnteredAmount] = useState('');
+    const [enteredAmount, setEnteredAmount] = useState(0.01);
     const [enteredDate, setEnteredDate] = useState('');
 
 
@@ -12,7 +13,7 @@ const ExpenseForm: FC<{}> = (props) => {
     }
 
     const amountChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
-        setEnteredAmount(event.target.value);
+        setEnteredAmount(Number.parseFloat(event.target.value));
     }
 
     const dateChangeHandler = (event: ChangeEvent<HTMLInputElement>) => {
@@ -22,16 +23,16 @@ const ExpenseForm: FC<{}> = (props) => {
     const submitHandler = (event: SyntheticEvent<HTMLFormElement>) => {
         event.preventDefault();
 
-        const expenseData = {
+        const expenseData: ExpenseFormData = {
             title: enteredTitle,
             amount: enteredAmount,
             date: new Date(enteredDate)
         }
 
-        console.log(expenseData);
+        props.onSaveExpenseData(expenseData);
 
         setEnteredTitle('');
-        setEnteredAmount('');
+        setEnteredAmount(0.01);
         setEnteredDate('');
     }
 

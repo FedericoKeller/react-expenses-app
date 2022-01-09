@@ -5,8 +5,18 @@ export interface Expense {
     date: Date;
 }
 
+export type ExpenseFormData = Omit<Expense, "id">;
+
 export interface ExpenseProps {
     expenseItem: Expense;
+}
+
+export interface ExpenseFormProps {
+    onSaveExpenseData: (enteredExpenseData: ExpenseFormData) => void;
+}
+
+export interface NewExpenseProps {
+    onAddExpense: (expenses: Expense) => void;
 }
 
 export interface FullDate {
