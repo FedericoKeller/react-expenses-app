@@ -19,6 +19,11 @@ export interface NewExpenseProps {
     onAddExpense: (expenses: Expense) => void;
 }
 
+export interface ExpensesFilterProps {
+    onSelectedYear: (year: number) => void;
+    defaultYear: number;
+}
+
 export interface FullDate {
     month: string;
     day: string;
