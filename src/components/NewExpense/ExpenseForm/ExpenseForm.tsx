@@ -1,6 +1,6 @@
 import { ChangeEvent, FC, SyntheticEvent, useState } from "react";
-import { ExpenseFormData } from "../../../models/expenses.interface";
-import { ExpenseFormProps } from "../../../models/props.interface";
+import { ExpenseFormData } from "../../../models/Expense";
+import { ExpenseFormProps } from "../../../models/Props";
 import Button from "../../UI/Button/Button";
 import './ExpenseForm.css';
 

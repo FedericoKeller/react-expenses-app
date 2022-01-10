@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { FilteredExpensesProps } from "../../../models/props.interface";
+import { FilteredExpensesProps } from "../../../models/Props";
 import ExpenseItem from "../ExpenseItem/ExpenseItem";
 import './ExpensesList.css';
 

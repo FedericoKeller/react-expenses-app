@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
-import { Expense, ExpenseFormData } from "../../models/expenses.interface";
-import { NewExpenseProps } from "../../models/props.interface";
+import { Expense, ExpenseFormData } from "../../models/Expense";
+import { NewExpenseProps } from "../../models/Props";
 import Button from "../UI/Button/Button";
 import ExpenseForm from "./ExpenseForm/ExpenseForm";
 import './NewExpense.css';

@@ -1,4 +1,4 @@
-import { Expense, ExpenseFormData } from "./expenses.interface";
+import { Expense, ExpenseFormData } from "./Expense";
 
 export interface ExpenseProps {
     expenseItem: Expense;

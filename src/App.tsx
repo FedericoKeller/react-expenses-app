@@ -1,8 +1,8 @@
 import { useState } from "react";
-import ExpenseDisplay from "./components/Expenses/Expenses";
+import Expenses from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
-import { Expense } from "./models/expenses.interface";
-import ExpenseService from "./services/expenses.service";
+import { Expense } from "./models/Expense";
+import ExpenseService from "./services/ExpenseService";
 
 function App() {
   const [expenses, setExpenses] = useState(ExpenseService.getExpenses());
@@ -15,7 +15,7 @@ function App() {
   return (
     <div>
       <NewExpense onAddExpense={addExpenseHandler}/>
-      <ExpenseDisplay expenses={expenses}/>
+      <Expenses expenses={expenses}/>
     </div>
   );
 }

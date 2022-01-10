@@ -1,4 +1,4 @@
-import { Expense } from "../models/expenses.interface";
+import { Expense } from "../models/Expense";
 
 
 const expenses: Expense[] = [

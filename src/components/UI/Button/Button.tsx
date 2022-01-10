@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { ButtonProps } from "../../../models/ui.interface";
+import { ButtonProps } from "../../../models/UI";
 import './Button.css';
 
 const Button: FC<ButtonProps> = (props) => {

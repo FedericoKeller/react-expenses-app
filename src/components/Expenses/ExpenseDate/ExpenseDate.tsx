@@ -1,6 +1,6 @@
 import { FC } from 'react';
-import { FullDate, FullDateProps } from '../../../models/expenses.interface';
-import UtilityService from '../../../services/utilities.service';
+import { FullDate, FullDateProps } from '../../../models/Expense';
+import UtilityService from '../../../services/UtilityService';
 import './ExpenseDate.css';
 
 const ExpenseDate: FC<FullDateProps> = (props) => {
