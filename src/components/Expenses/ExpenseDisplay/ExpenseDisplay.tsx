@@ -1,15 +1,16 @@
 import { FC, useState } from "react";
-import { Expense } from "../../../models/expenses.interface";
-import ExpenseService from "../../../services/expenses.service";
+import { ExpenseDisplayProps } from "../../../models/props.interface";
 import ExpensesFilter from "../../ExpensesFilter/ExpensesFilter";
 import Card from "../../UI/Card/Card";
-import ExpenseItem from "../ExpenseItem/ExpenseItem";
 import './ExpenseDisplay.css';
+import ExpensesList from "./ExpensesList/ExpensesList";
 
-const ExpenseDisplay: FC<{}> = () => {
-    const expenses: Expense[] = ExpenseService.getExpenses();
+const ExpenseDisplay: FC<ExpenseDisplayProps> = (props) => {
+
+
     const [selectedYear, setSelectedYear] = useState(2020);
-    console.log(selectedYear)
+
+    const filteredExpenses = props.expenses.filter(expense => expense.date.getFullYear() === selectedYear);
 
 
     const getExpensesFilterHandler = (year: number) => {
@@ -21,9 +22,7 @@ const ExpenseDisplay: FC<{}> = () => {
         <div>
             <ExpensesFilter onSelectedYear={getExpensesFilterHandler} defaultYear={selectedYear}/>
             <Card className="expenses">
-            {
-                expenses.map((expense, index) => <ExpenseItem key={index} expenseItem={expense} />)
-            }
+                <ExpensesList filteredExpenses={filteredExpenses}/>
             </Card>
         </div>
     )

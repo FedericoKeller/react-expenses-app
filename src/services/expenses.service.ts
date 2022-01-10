@@ -31,7 +31,7 @@ const ExpenseService = {
       },
 
       updateExpenses(item: Expense) {
-        expenses.push(item);
+        expenses.unshift(item);
       }
 }
 
