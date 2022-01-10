@@ -1,5 +1,5 @@
 import { ChangeEvent, FC } from 'react';
-import { ExpensesFilterProps } from '../../models/props.interface';
+import { ExpensesFilterProps } from '../../../models/props.interface';
 import './ExpensesFilter.css';
 
 const ExpensesFilter: FC<ExpensesFilterProps> = (props) => {

@@ -4,7 +4,7 @@ export interface ExpenseProps {
     expenseItem: Expense;
 }
 
-export interface ExpenseDisplayProps {
+export interface ExpensesProps {
     expenses: Expense[];
 }
 
@@ -14,6 +14,7 @@ export interface FilteredExpensesProps {
 
 export interface ExpenseFormProps {
     onSaveExpenseData: (enteredExpenseData: ExpenseFormData) => void;
+    onCancel: () => void;
 }
 
 export interface NewExpenseProps {

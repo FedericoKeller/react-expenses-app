@@ -1,11 +1,11 @@
 import { FC, useState } from "react";
-import { ExpenseDisplayProps } from "../../../models/props.interface";
-import ExpensesFilter from "../../ExpensesFilter/ExpensesFilter";
-import Card from "../../UI/Card/Card";
-import './ExpenseDisplay.css';
+import { ExpensesProps } from "../../models/props.interface";
+import ExpensesFilter from "./ExpensesFilter/ExpensesFilter";
+import Card from "../UI/Card/Card";
+import './Expenses.css';
 import ExpensesList from "./ExpensesList/ExpensesList";
 
-const ExpenseDisplay: FC<ExpenseDisplayProps> = (props) => {
+const Expenses: FC<ExpensesProps> = (props) => {
 
 
     const [selectedYear, setSelectedYear] = useState(2020);
@@ -20,12 +20,12 @@ const ExpenseDisplay: FC<ExpenseDisplayProps> = (props) => {
   
     return (
         <div>
-            <ExpensesFilter onSelectedYear={getExpensesFilterHandler} defaultYear={selectedYear}/>
             <Card className="expenses">
+                <ExpensesFilter onSelectedYear={getExpensesFilterHandler} defaultYear={selectedYear}/>
                 <ExpensesList filteredExpenses={filteredExpenses}/>
             </Card>
         </div>
     )
 }
 
-export default ExpenseDisplay;
+export default Expenses;

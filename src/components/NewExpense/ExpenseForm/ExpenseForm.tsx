@@ -1,6 +1,7 @@
 import { ChangeEvent, FC, SyntheticEvent, useState } from "react";
 import { ExpenseFormData } from "../../../models/expenses.interface";
 import { ExpenseFormProps } from "../../../models/props.interface";
+import Button from "../../UI/Button/Button";
 import './ExpenseForm.css';
 
 const ExpenseForm: FC<ExpenseFormProps> = (props) => {
@@ -54,7 +55,8 @@ const ExpenseForm: FC<ExpenseFormProps> = (props) => {
                </div>
            </div>
            <div className="new-expense__actions">
-               <button type="submit">Add Expense</button>
+               <Button type="button" onClickEvent={props.onCancel}>Cancel</Button>
+               <Button type="submit">Add Expense</Button>
            </div>
        </form>
     )

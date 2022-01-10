@@ -1,14 +1,12 @@
 import { useState } from "react";
-import ExpenseDisplay from "./components/Expenses/ExpenseDisplay/ExpenseDisplay";
+import ExpenseDisplay from "./components/Expenses/Expenses";
 import NewExpense from "./components/NewExpense/NewExpense";
 import { Expense } from "./models/expenses.interface";
 import ExpenseService from "./services/expenses.service";
 
 function App() {
   const [expenses, setExpenses] = useState(ExpenseService.getExpenses());
-
-  console.log(expenses)
-
+  
   const addExpenseHandler = (expense: Expense) => {
     ExpenseService.updateExpenses(expense);
     setExpenses(ExpenseService.getExpenses());

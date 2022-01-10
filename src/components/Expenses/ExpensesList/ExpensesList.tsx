@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { FilteredExpensesProps } from "../../../../models/props.interface";
-import ExpenseItem from "../../ExpenseItem/ExpenseItem";
+import { FilteredExpensesProps } from "../../../models/props.interface";
+import ExpenseItem from "../ExpenseItem/ExpenseItem";
 import './ExpensesList.css';
 
 const ExpensesList: FC<FilteredExpensesProps> = (props) => {
